@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandip Kharel | Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-page">
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <h1 class="logo">Sandip Kharel</h1>
+        <p class="role">Admin Panel</p>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" type="button">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section admin-main">
+    <div class="container admin-container">
+      <div class="admin-header-block">
+        <h2 class="section-title">Admin Panel</h2>
+        <p class="feedback-intro">
+          Manage site content here. Changes will be saved in the database and shown on the site.
+        </p>
+      </div>
+
+      <form id="adminForm" class="admin-form-layout">
+        <section class="admin-section alt-bg">
+          <h2 class="section-title">What I’m Working On</h2>
+          <div id="adminCurrentWorkContainer"></div>
+          <div class="admin-actions">
+            <button type="button" id="addCurrentWorkBtn" class="btn secondary">
+              Add Current Work
+            </button>
+          </div>
+        </section>
+
+        <section class="admin-section">
+          <h2 class="section-title">Featured Projects</h2>
+          <div id="adminFeaturedProjectsContainer"></div>
+          <div class="admin-actions">
+            <button type="button" id="addFeaturedProjectBtn" class="btn secondary">
+              Add Featured Project
+            </button>
+          </div>
+        </section>
+
+        <section class="admin-section alt-bg">
+          <h2 class="section-title">Why Work With Me</h2>
+          <div id="adminWhyWorkWithMeContainer"></div>
+          <div class="admin-actions">
+            <button type="button" id="addWhyWorkWithMeBtn" class="btn secondary">
+              Add Reason
+            </button>
+          </div>
+        </section>
+
+        <section class="admin-section">
+          <h2 class="section-title">Skills</h2>
+          <div id="adminSkillsContainer"></div>
+          <div class="admin-actions">
+            <button type="button" id="addSkillBtn" class="btn secondary">
+              Add Skill
+            </button>
+          </div>
+        </section>
+
+        <section class="admin-section alt-bg">
+          <h2 class="section-title">Projects</h2>
+          <div id="adminProjectsContainer"></div>
+          <div class="admin-actions">
+            <button type="button" id="addProjectBtn" class="btn secondary">
+              Add Project
+            </button>
+          </div>
+        </section>
+
+        <section class="admin-section">
+          <h2 class="section-title">Certificates</h2>
+          <div id="adminCertificatesContainer"></div>
+          <div class="admin-actions">
+            <button type="button" id="addCertificateBtn" class="btn secondary">
+              Add Certificate
+            </button>
+          </div>
+        </section>
+
+        <section class="admin-section alt-bg">
+          <h2 class="section-title">Education</h2>
+          <div id="adminEducationContainer"></div>
+          <div class="admin-actions">
+            <button type="button" id="addEducationBtn" class="btn secondary">
+              Add Education
+            </button>
+          </div>
+        </section>
+
+        <section class="admin-section">
+          <div class="admin-feedback-header">
+            <h2 class="section-title">Feedback Inbox</h2>
+            <div id="feedbackBadge" class="btn secondary admin-badge">New: 0</div>
+          </div>
+
+          <div id="adminFeedbackContainer" class="admin-feedback-container"></div>
+        </section>
+
+        <div class="admin-submit-row">
+          <button type="submit" id="saveProfileBtn" class="btn primary">
+            Save Changes
+          </button>
+        </div>
+      </form>
+
+      <p id="adminMessage" class="admin-message"></p>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

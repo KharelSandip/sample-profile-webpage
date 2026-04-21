@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section class="hero">
+    <div class="container">
+
+      <h2>Admin Login</h2>
+      <p>Secure access only</p>
+
+      <form id="loginForm" class="card">
+        <input
+          type="text"
+          id="username"
+          placeholder="Username"
+          required
+        />
+
+        <br><br>
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+
+        <br><br>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p id="message"></p>
+
+    </div>
+  </section>
+
+  <script>
+  document.getElementById("loginForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    console.log("Login button clicked");
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const message = document.getElementById("message");
+
+    message.textContent = "Trying to log in...";
+
+    try {
+      const response = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          username: username,
+          password: password
+        })
+      });
+
+      console.log("Response status:", response.status);
+
+      const data = await response.json();
+      console.log("Response data:", data);
+
+      if (response.ok) {
+        message.textContent = "Login successful. Redirecting...";
+        window.location.href = data.redirect;
+      } else {
+        message.textContent = data.error || "Login failed";
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      message.textContent = "Something went wrong while logging in.";
+    }
+  });
+</script>
+</body>
+</html>

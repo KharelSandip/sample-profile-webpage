@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <h1 class="logo">Sandip Kharel</h1>
+        <p class="role">DevOps | Site Reliability Engineer | Cloud Engineer</p>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" type="button">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="resume.html#skills">Skills</a>
+        <a href="resume.html#projects">Projects</a>
+        <a href="resume.html#certifications">Certifications</a>
+        <a href="resume.html#feedback">Feedback</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h2>Hi</h2>
+
+          <p id="profileIntro">
+            Thank you for visiting my profile. I am a Cloud enthusiast focused on building resilient, secure, and scalable systems. If you are a recruiter or senior engineer, I would welcome the opportunity to connect and value any feedback or professional insights you might share.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="resume.html" class="btn primary">View Resume</a>
+            <a href="#featured_projects" class="btn secondary">See Projects</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="profile_pic.jpeg"
+            alt="Profile Picture"
+            id="profileImage"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="working_on" class="section">
+      <div class="container">
+        <h2 class="section-title">What I’m Working On Right Now</h2>
+        <div id="workingOnContainer" class="projects-grid">
+        </div>
+      </div>
+    </section>
+
+    <section id="featured_projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div id="featuredProjectsContainer" class="projects-grid">
+        </div>
+      </div>
+    </section>
+
+    <section id="why_work_with_me" class="section">
+      <div class="container">
+        <h2 class="section-title">Why Work With Me</h2>
+        <div id="whyWorkWithMeContainer" class="projects-grid">
+        </div>
+      </div>
+    </section>
+
+
+    <section id="feedback" class="section alt-bg">
+      <div class="container">
+        <h2 class="section-title">Feedback</h2>
+
+        <p class="feedback-intro">
+          I highly value constructive feedback. Suggestions on what I should improve,
+          learn next, or strengthen are appreciated.
+        </p>
+
+        <div class="comment-form">
+          <div>
+            <input type="text" id="commentName" placeholder="Name" />
+          </div>
+
+          <div>
+            <input type="text" id="commentRole" placeholder="LinkedIn" />
+          </div>
+
+          <div>
+            <textarea
+              id="commentText"
+              rows="5"
+              placeholder="Leave your feedback here..."
+            ></textarea>
+          </div>
+
+          <div>
+            <button id="submitComment" type="button">Submit Feedback</button>
+          </div>
+        </div>
+      </section>
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-box">
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:kharelsundeep7@gmail.com" target="_blank" rel="noopener noreferrer">
+              kharelsundeep7@gmail.com
+            </a>
+          </p>
+
+          <p>
+            <strong>GitHub:</strong>
+            <a
+              href="https://github.com/KharelSandip"
+              id="githubLink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/KharelSandip
+            </a>
+          </p>
+
+          <p>
+            <strong>LinkedIn:</strong>
+            <a
+              href="https://www.linkedin.com/in/sandip-kharel-a5b43729a/"
+              id="linkedinLink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/sandip-kharel-a5b43729a
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Sandip Kharel. All rights reserved.😁</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

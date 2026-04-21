@@ -1,0 +1,8 @@
+flask
+flask_sqlalchemy
+flask_cors
+sqlalchemy
+pymysql
+cryptography
+datetime
+dotenv
